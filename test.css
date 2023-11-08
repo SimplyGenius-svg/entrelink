@@ -1,0 +1,63 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    padding-top: 10px;
+    display: block;
+    float: inline-block;
+  }
+  
+  /* Style the links inside the navigation bar */
+ 
+  .entrelink {
+    color: black;
+    font: arial sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+  }
+ 
+   /* hover action for all links in navbar */
+
+  .signup {
+    display: block;
+    float: inline-end;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    border: 1px #d6d4d4 solid;
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+
+  }
+  
+
+  .cb {
+    display: inline-block;
+    position: relative;
+    color: black;
+    font: arial sans-serif;
+    padding: 30px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .cb::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cb:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
