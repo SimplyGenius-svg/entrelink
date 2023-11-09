@@ -1,47 +1,82 @@
 /* Add a black background color to the top navigation */
 .topnav {
-    padding-top: 10px;
-    display: block;
-    float: inline-block;
-  }
-  
-  /* Style the links inside the navigation bar */
- 
-  .entrelink {
-    color: black;
-    font: arial sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    display: inline-block;
-    position: relative;
-  }
- 
-   /* hover action for all links in navbar */
+  background-color: whitesmoke; /* Black */
+  padding: 20px 0; /* Increased padding for better centering */
+  display: flex;
+  justify-content: space-between; /* Align items on either end */
+  align-items: center;
+}
 
-  .signup {
-    display: block;
-    float: inline-end;
-    width: 150px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: white;
-    color: black;
-    border: 1px #d6d4d4 solid;
-    padding-top: 10px;
-    font-size: 20px;
-    text-align: center;
+/* Style the links inside the navigation bar */
+.entrelink {
+  font-family: 'Arial', sans-serif;
+  font-size: 50px; /* Increased font size */
+  font-weight: bold;
+  margin: 0;
+  text-transform: lowercase;
+  animation: gradientText1 10s infinite; /* Adjust the duration as needed */
+}
 
-  }
-  
+/* Hover action for all links in the navbar */
+.signup {
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #483D8B; /* Dark Slate Blue */
+  color: #FFFFFF; /* White */
+  border: 1px solid #483D8B;
+  padding-top: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cb {
+  color: #8A2BE2;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 30px 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cb:hover {
+  color: #483D8B; /* Dark Slate Blue */
+}
+
+/*for main entrelink line.*/
+@keyframes gradientText1 {
+  0%, 100% { color: #8A2BE2; } /* Purple */
+  25% { color: #00008B; } /* Dark Blue */
+  75% { color: #00CED1; } /* Turquoise */
+}
+/*for tagline below navbar.*/
+
+@keyframes gradientText2 {
+  0%, 100% { color: #FA9E34; } /* Purple */
+  25% { color: #A33163; } /* Dark Blue */
+  75% { color: #FED790; } /* Turquoise */
+}
+/* New text beneath Entrelink */
+.tagline {
+  color: #8A2BE2; /* Purple */
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px; /* Adjust as needed */
+}
 
   .cb {
     display: inline-block;
     position: relative;
     color: black;
     font: arial sans-serif;
-    padding: 30px 16px;
+    padding: 10px 16px;
     text-decoration: none;
     font-size: 20px;
+    cursor: pointer;
   }
   
   .cb::after {
@@ -52,12 +87,70 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: #483D8B;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   .cb:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+
+  .main {
+    background-color: white;
+    text-align: center;
+    font-size: large;
+    animation: gradientText2 10s infinite;
+    font-size: 50px;
+
+  }
+
+    
+  body {
+    font-family: 'Arial', serif;
+  }
+  
+  h1 {
+    font-size: 50px;
+    text-align: center;
+    background-color: white;
+    color: black;
+  }
+  
+  .content-slider {
+    height: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .sentence {
+    display: flex;
+}
+
+.word {
+  margin: 0 10px;
+  font-size: 50px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 3s linear forwards;
+}
+
+.word.connect {
+  animation-delay: 2s; /* Adjust the delay as needed */
+}
+
+.word.create {
+  animation-delay: 4s; /* Adjust the delay as needed */
+}
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
