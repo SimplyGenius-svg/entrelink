@@ -1,63 +1,62 @@
 /* Add a black background color to the top navigation */
 .topnav {
-    padding-top: 10px;
-    display: block;
-    float: inline-block;
-  }
-  
-  /* Style the links inside the navigation bar */
- 
-  .entrelink {
-    color: black;
-    font: arial sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    display: inline-block;
-    position: relative;
-  }
- 
-   /* hover action for all links in navbar */
+    background-color: #1A1A1A; /* Black */
+    padding: 20px 0; /* Increased padding for better centering */
+    display: flex;
+    justify-content: space-between; /* Align items on either end */
+    align-items: center;
+}
 
-  .signup {
-    display: block;
-    float: inline-end;
+/* Style the links inside the navigation bar */
+.entrelink {
+    font-family: 'Arial', sans-serif;
+    font-size: 50px; /* Increased font size */
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    animation: gradientText 10s infinite; /* Adjust the duration as needed */
+}
+
+/* Hover action for all links in the navbar */
+.signup {
     width: 150px;
     height: 30px;
     border-radius: 10px;
-    background-color: white;
-    color: black;
-    border: 1px #d6d4d4 solid;
+    background-color: #483D8B; /* Dark Slate Blue */
+    color: #FFFFFF; /* White */
+    border: 1px solid #483D8B;
     padding-top: 10px;
+    font-family: 'Arial', sans-serif;
     font-size: 20px;
     text-align: center;
+    cursor: pointer;
+}
 
-  }
-  
-
-  .cb {
-    display: inline-block;
-    position: relative;
-    color: black;
-    font: arial sans-serif;
+.cb {
+    color: #8A2BE2;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
     padding: 30px 16px;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cb:hover {
+    color: #483D8B; /* Dark Slate Blue */
+}
+
+@keyframes gradientText {
+    0%, 100% { color: #8A2BE2; } /* Purple */
+    25% { color: #00008B; } /* Dark Blue */
+    75% { color: #00CED1; } /* Turquoise */
+}
+
+/* New text beneath Entrelink */
+.tagline {
+    color: #8A2BE2; /* Purple */
+    font-family: 'Arial', sans-serif;
     font-size: 20px;
-  }
-  
-  .cb::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .cb:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+    font-weight: bold;
+    margin-top: 20px; /* Adjust as needed */
+}
