@@ -9,7 +9,7 @@
 
 /* Style the links inside the navigation bar */
 .entrelink {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Monaco', monospace;
   font-size: 50px; /* Increased font size */
   font-weight: bold;
   margin: 0;
@@ -19,13 +19,13 @@
 
 /* Hover action for all links in the navbar */
 .signup {
-  width: 150px;
+  width: 175px;
   height: 30px;
   border-radius: 10px;
   background-color: #483D8B; /* Dark Slate Blue */
   color: #FFFFFF; /* White */
   border: 1px solid #483D8B;
-  padding-top: 10px;
+  padding: 10px;
   font-family: 'Arial', sans-serif;
   font-size: 20px;
   text-align: center;
@@ -59,15 +59,31 @@
   25% { color: #A33163; } /* Dark Blue */
   75% { color: #FED790; } /* Turquoise */
 }
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 /* New text beneath Entrelink */
 .tagline {
   color: #8A2BE2; /* Purple */
   font-family: 'Arial', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 10px; /* Adjust as needed */
 }
 
+
+.hello {
+  text-align: center;
+  font-size: 50px;
+  color: black;
+  padding-top: 100px;
+}
   .cb {
     display: inline-block;
     position: relative;
@@ -146,11 +162,11 @@
 .word.create {
   animation-delay: 4s; /* Adjust the delay as needed */
 }
-  @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+
+
+.tagtext {
+  color: gray;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
 }
