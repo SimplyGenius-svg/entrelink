@@ -1,36 +1,22 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: whitesmoke; /* Black */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   padding: 20px 0; /* Increased padding for better centering */
   display: flex;
   justify-content: space-between; /* Align items on either end */
   align-items: center;
+  background-color: whitesmoke;
 }
 
 /* Style the links inside the navigation bar */
 .entrelink {
-  font-family: 'Monaco', monospace;
+  font-family: 'Nunito', sans-serif;
   font-size: 50px; /* Increased font size */
   font-weight: bold;
   margin: 0;
   text-transform: lowercase;
-  animation: gradientText1 10s infinite; /* Adjust the duration as needed */
 }
 
-/* Hover action for all links in the navbar */
-.signup {
-  width: 175px;
-  height: 30px;
-  border-radius: 10px;
-  background-color: #483D8B; /* Dark Slate Blue */
-  color: #FFFFFF; /* White */
-  border: 1px solid #483D8B;
-  padding: 10px;
-  font-family: 'Arial', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-}
 
 .cb {
   color: #8A2BE2;
@@ -53,12 +39,6 @@
   75% { color: #00CED1; } /* Turquoise */
 }
 /*for tagline below navbar.*/
-
-@keyframes gradientText2 {
-  0%, 100% { color: #FA9E34; } /* Purple */
-  25% { color: #A33163; } /* Dark Blue */
-  75% { color: #FED790; } /* Turquoise */
-}
 
 @keyframes fadeIn {
   0% {
@@ -115,10 +95,10 @@
 
 
   .main {
-    background-color: white;
+  
     text-align: center;
     font-size: large;
-    animation: gradientText2 10s infinite;
+    /* animation: gradientText1 10s infinite; */
     font-size: 50px;
 
   }
@@ -131,7 +111,7 @@
   h1 {
     font-size: 50px;
     text-align: center;
-    background-color: white;
+    
     color: black;
   }
   
@@ -160,13 +140,36 @@
 }
 
 .word.create {
-  animation-delay: 4s; /* Adjust the delay as needed */
+  animation-delay: 3s; /* Adjust the delay as needed */
 }
 
 
 .tagtext {
-  color: gray;
+  color: black;
   text-align: center;
   padding-top: 30px;
   font-size: 30px;
+}
+
+
+         
+         
+.signup {
+  background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.signup:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
