@@ -1,12 +1,13 @@
 /* Add a black background color to the top navigation */
 .topnav {
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px 0; /* Increased padding for better centering */
   display: flex;
   justify-content: space-between; /* Align items on either end */
   align-items: center;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
 }
+
 
 /* Style the links inside the navigation bar */
 .entrelink {
@@ -15,6 +16,13 @@
   font-weight: bold;
   margin: 0;
   text-transform: lowercase;
+  color:crimson;
+}
+
+
+.entrelink-logo {
+  width: auto;
+  height: 50px; /* Set the height to match the original text size */
 }
 
 
@@ -61,7 +69,7 @@
 .hello {
   text-align: center;
   font-size: 50px;
-  color: black;
+  color: whitesmoke;
   padding-top: 100px;
 }
   .cb {
@@ -112,7 +120,7 @@
     font-size: 50px;
     text-align: center;
     
-    color: black;
+    color: white;
   }
   
   .content-slider {
@@ -132,23 +140,63 @@
   font-size: 50px;
   font-weight: bold;
   opacity: 0;
-  animation: fadeIn 3s linear forwards;
+  animation: slideIn 2s forwards; /* Use the new animation 'slideIn' */
 }
 
-.word.connect {
-  animation-delay: 2s; /* Adjust the delay as needed */
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-50px); /* Start position off-screen to the left */
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0); /* End position, fully visible */
+      opacity: 1;
+  }
 }
 
-.word.create {
-  animation-delay: 3s; /* Adjust the delay as needed */
+.word {
+  display: flex;
 }
 
+.make {
+  background: linear-gradient(to right, #d34f4f, #2B65A0); /* Light purple to darker light blue */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  opacity: 0;
+  animation: slideIn 3s forwards;
+}
+
+.connect {
+  background: linear-gradient(to right, #FFD700, #FF69B4); /* Light yellowish-orange to pinkish red */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  opacity: 0;
+  animation: slideIn 4s forwards;
+}
+
+.create {
+  background: linear-gradient(to right, #81ede9, #7af37a); /* Light blue to mint green */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  opacity: 0;
+  animation: slideIn 5s forwards;
+}
+/* Rest of your existing CSS remains unchanged */
+.connecting-words {
+  color: white; /* Set the color for connecting words */
+  font-weight: bold;
+}
 
 .tagtext {
-  color: black;
+  color: whitesmoke;
   text-align: center;
   padding-top: 30px;
   font-size: 30px;
+  padding-bottom: 50px;
 }
 
 
