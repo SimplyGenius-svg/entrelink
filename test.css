@@ -6,8 +6,13 @@
   justify-content: space-between; /* Align items on either end */
   align-items: center;
   background-color: rgb(255, 255, 255);
+  color: whitesmoke
 }
 
+
+.spacer {
+  margin-top: 150px; /* Adjust the value as needed */
+}
 
 /* Style the links inside the navigation bar */
 .entrelink {
@@ -214,10 +219,16 @@
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
+  cursor:pointer
 }
 
 .signup:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+
+.storyhead {
+  font-weight: bold;
+  font-size: large;
 }
